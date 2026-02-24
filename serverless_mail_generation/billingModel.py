@@ -32,6 +32,7 @@ class InvoiceDocument(BaseModel):
     items: List[BillingItem]
     summary: BillingSummary
     currency: str = "INR"
+    status: str = "draft"
 
     model_config = ConfigDict(
         populate_by_name=True,
